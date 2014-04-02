@@ -1,0 +1,129 @@
+body {
+	
+}
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+
+.clearfix {
+	display: inline-block;
+}
+
+/* -------- ALL SITES -------- */
+header nav {
+	position: fixed;
+	top: 0;
+	right: 0;
+	background-color: green;
+	width: 100%;
+}
+
+#header-img {
+	width: 100%;
+	height: 600px;
+	margin: 0;
+	background: url("../img/intro-bg.jpg") no-repeat center;
+	background-size: cover;
+}
+
+.container-fluid {
+	padding: 0;
+	text-align: center;
+}
+
+footer {
+	background-color: #424242;
+	color: #ffffff;
+	height: auto;
+	min-height: 240px;
+}
+
+/* -------- MAIN SITE -------- */
+
+#intro {
+	vertical-align: top;
+	text-align: left;
+}
+
+#intro div:first-child {
+	padding: 40px;
+}
+
+#intro img {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	width: 100%;
+}
+
+#intro ul {
+	padding-left: 0;
+}
+
+#intro ul li {
+	display: block;
+	width: 100%;
+	vertical-align: top;
+}
+
+#applications {
+	text-align: center;
+	background: #d0d0d0;
+}
+
+.example {
+	display: inline-block;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box; /* Firefox */
+	width: 220px;
+	margin: 0 6px;
+}
+
+.example img {
+	margin-bottom: 20px;
+	border: none;
+	border-radius: 75px;
+}
+
+.example span {
+	display: block;
+	color: #c3002f;
+	font-size: 18px;
+	font-weight: bold;
+	padding-bottom: 20px;
+}
+
+.example p {
+	width: 100%;
+	font-size: 16px;
+}
+
+#spec {
+	text-align: center;
+}
+
+#spec table {
+	width: 640px;
+	margin: 0 auto;
+	text-align: left;
+}
+
+#spec table div {
+	display: inline-block;
+	vertical-align: top;
+}
+
+#spec table div:first-child {
+	width: 120px;
+}
+
+#event {
+	text-align: left;
+	background-color: #a3f046;
+}
+
