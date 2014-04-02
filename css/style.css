@@ -1,5 +1,24 @@
+/* 
+
+Colorschemes
+http://colorschemedesigner.com/#2E11Tlos8w0w0
+
+Greys from light to dark:
+eeefee
+d1d2cf
+a9aca7
+656862
+3e3f3c
+
+
+*/
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700&subset=latin,latin-ext);
+
 body {
-	
+	font: normal 16px Arial;
+	font-family: "Open Sans", Arial, Helvetica, sans-serif;
+	color: #3e3f3c;
 }
 
 .clearfix:after {
@@ -15,13 +34,35 @@ body {
 	display: inline-block;
 }
 
+h1, h2, h3 {
+	font-weight: bold;
+}
+
+h2 {
+	font-size: 2em;
+}
+
 /* -------- ALL SITES -------- */
 header nav {
 	position: fixed;
 	top: 0;
 	right: 0;
-	background-color: green;
+	height: 40px;
+	background-color: rgba(10,12,10,0.4);
 	width: 100%;
+	z-index: 300;
+}
+
+header nav a {
+	display: inline-block;
+	line-height: 40px;
+	padding: 0 15px;
+	margin: 0;
+}
+
+header nav a:hover {
+	text-decoration: none;
+	background-color: #659349;
 }
 
 #header-img {
@@ -47,8 +88,18 @@ footer {
 /* -------- MAIN SITE -------- */
 
 #intro {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	max-width: 980px;
+	margin: 0 auto;
 	vertical-align: top;
 	text-align: left;
+	padding-bottom: 50px;
+	padding-right: 2em;
+}
+
+#intro h1 {
+	margin-top: 90px;
 }
 
 #intro div:first-child {
@@ -59,6 +110,14 @@ footer {
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	width: 100%;
+	padding-top: 50px;
+	padding-right: 40px;
+}
+
+#intro p {
+	margin: 20px 0;
+	font-size: 1.2em;
+	line-height: 1.7;
 }
 
 #intro ul {
@@ -69,48 +128,99 @@ footer {
 	display: block;
 	width: 100%;
 	vertical-align: top;
+	margin: 10px 0;
 }
 
 #applications {
 	text-align: center;
-	background: #d0d0d0;
+	background: #eeefee;
+	padding-bottom: 60px;
 }
 
-.example {
+#applications h2 {
+	margin: 80px auto 40px auto;
+	color: #72c441;
+}
+
+#applications p {
+	max-width: 600px;
+	margin: 40px auto 70px auto;
+	line-height: 1.7;
+	font-size: 1.2em;
+}
+
+.example.row-fluid {
+	display: block;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box; /* Firefox */
+	max-width: 980px;
+	margin: 0 auto;
+}
+
+div.example {
+	position: relative;
 	display: inline-block;
 	box-sizing: border-box;
 	-moz-box-sizing: border-box; /* Firefox */
-	width: 220px;
-	margin: 0 6px;
+	padding: 0 20px;
 }
 
 .example img {
 	margin-bottom: 20px;
-	border: none;
 	border-radius: 75px;
 }
 
 .example span {
 	display: block;
-	color: #c3002f;
-	font-size: 18px;
-	font-weight: bold;
-	padding-bottom: 20px;
+	color: #a9aca7;
+	margin-bottom: 40px;
+	font-weight: lighter;
 }
 
-.example p {
-	width: 100%;
-	font-size: 16px;
+#applications p.insta {
+	margin: 30px auto 0 auto;
+	padding: 0.8em;
+	border: 1px solid #a9aca7;
+	border-radius: 4px;
+	font-size: 1em;
+	/*line-height: 1.2;*/
+	color: #656862;
 }
 
 #spec {
 	text-align: center;
 }
 
+#spec h2 {
+	margin: 70px auto 10px auto;
+	color: #72c441;
+}
+
+#spec h3 {
+	margin: 0 auto 60px auto;
+	font-size: 1.6em;
+	color: #656862;
+}
+
 #spec table {
-	width: 640px;
-	margin: 0 auto;
+	max-width: 760px;
+	margin: 60px auto;
 	text-align: left;
+	border: 2px solid #9be271;
+	border-radius: 4px;
+}
+
+#spec table tr {
+	border-bottom: 1px solid #a9aca7;
+}
+
+#spec table tr.no-bottom-border{
+	border-bottom: 1px solid transparent;
+}
+
+#spec table td {
+	border: none;
+	padding: 12px 16px;
 }
 
 #spec table div {
@@ -122,8 +232,30 @@ footer {
 	width: 120px;
 }
 
+#spec a {
+	display: inline-block;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box; /* Firefox */
+	width: 420px;
+	height: 50px;
+	margin: 20px auto 60px auto;
+	line-height: 50px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	background: #72c441;
+	border-radius: 2px;
+	font-weight: lighter;
+	color: #ffffff;
+}
+
+#spec a:hover {
+	text-decoration: none;
+	color: #3e3f3c;
+	background-color: #9be271;
+}
+
 #event {
 	text-align: left;
-	background-color: #a3f046;
+	background-color: #bdfc7e;
 }
 
