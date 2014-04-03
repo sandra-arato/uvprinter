@@ -35,11 +35,16 @@ body {
 }
 
 h1, h2, h3 {
-	font-weight: bold;
+	font-weight: 600;
 }
 
 h2 {
 	font-size: 2em;
+}
+
+h1 {
+	font-size: 2.6em;
+	color: #71c441;
 }
 
 /* -------- ALL SITES -------- */
@@ -47,10 +52,48 @@ header nav {
 	position: fixed;
 	top: 0;
 	right: 0;
-	height: 40px;
-	background-color: rgba(10,12,10,0.4);
 	width: 100%;
+	height: 60px;
+	background-color: #ffffff;
+	box-shadow: 0 2px 22px #656862;
+	line-height: 60px;
 	z-index: 300;
+}
+
+header nav img {
+	height: 50px;
+	margin-right: 40px;
+}
+
+header div.event-special {
+	position: fixed;
+	top: 0;
+	height: 22px;
+	width: 100%;
+	background-color: #9be271;
+	text-align: center;
+	font-size: 0.8em;
+	line-height: 22px;
+	z-index: 305;
+	cursor: pointer;
+}
+
+header div.event-special a {
+	color: #ffffff;
+}
+
+header div.event-special span {
+	padding-left: 12px;
+}
+
+header div.event-special a:hover {
+	color: #eeefee;
+	text-decoration: none;
+}
+
+header div.event-special + nav {
+	position: fixed;
+	top: 22px;
 }
 
 header nav a {
@@ -58,19 +101,32 @@ header nav a {
 	line-height: 40px;
 	padding: 0 15px;
 	margin: 0;
+	color: #656862;
+}
+
+header nav a.active {
+	border-bottom: 3px solid #62cc00;
+	padding-bottom: 7px;
 }
 
 header nav a:hover {
 	text-decoration: none;
-	background-color: #659349;
+	color: #71c441;
 }
 
 #header-img {
 	width: 100%;
 	height: 600px;
 	margin: 0;
+	margin-top: 82px;
 	background: url("../img/intro-bg.jpg") no-repeat center;
 	background-size: cover;
+}
+
+
+
+header + div {
+	/*position: relative;*/
 }
 
 .container-fluid {
@@ -78,8 +134,10 @@ header nav a:hover {
 	text-align: center;
 }
 
+
 footer {
-	background-color: #424242;
+	background-color: #3e3f3c;
+	margin-top: 40px;
 	color: #ffffff;
 	height: auto;
 	min-height: 240px;
@@ -102,16 +160,12 @@ footer {
 	margin-top: 90px;
 }
 
-#intro div:first-child {
-	padding: 40px;
-}
 
 #intro img {
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	width: 100%;
-	padding-top: 50px;
-	padding-right: 40px;
+	margin-top: 20px;
 }
 
 #intro p {
@@ -139,7 +193,7 @@ footer {
 
 #applications h2 {
 	margin: 80px auto 40px auto;
-	color: #72c441;
+	color: #9be271;
 }
 
 #applications p {
@@ -157,23 +211,28 @@ footer {
 	margin: 0 auto;
 }
 
-div.example {
+.example div {
 	position: relative;
 	display: inline-block;
 	box-sizing: border-box;
 	-moz-box-sizing: border-box; /* Firefox */
-	padding: 0 20px;
+	max-width: 220px;
+	margin: 0 20px;
 }
 
 .example img {
-	margin-bottom: 20px;
-	border-radius: 75px;
+	width: 200px;
+	height: 200px;
+	margin-bottom: 0;
 }
 
 .example span {
 	display: block;
-	color: #a9aca7;
+	width: 200px;
 	margin-bottom: 40px;
+	color: #656862;
+	background-color: #ffffff;
+	line-height: 40px;
 	font-weight: lighter;
 }
 
@@ -250,12 +309,167 @@ div.example {
 
 #spec a:hover {
 	text-decoration: none;
-	color: #3e3f3c;
 	background-color: #9be271;
 }
 
 #event {
 	text-align: left;
-	background-color: #bdfc7e;
+	background-color: #71c441;
+	padding: 30px 0;
+	color: #ffffff;
 }
 
+#event .row-fluid {
+	max-width: 980px;
+	margin: 0 auto;
+	padding-top: 50px;
+}
+#event h2 {
+	margin-top: 0;
+}
+
+#event h3 {
+	display: block;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	width: 300px;
+	margin: 40px auto 0 auto;
+	padding: 20px 6px;
+	font-weight: normal;
+	font-size: 1.2em;
+	text-align: center;
+	background-color: #ade28f;
+	border-bottom: 2px solid #71c441;
+}
+
+#event p.invitation {
+	margin-top: 50px;
+	margin-bottom: 20px;
+	letter-spacing: 1px;
+	/*font-size: 1.1em;*/
+}
+
+#event form {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	width: 300px;
+	margin: 0 auto 20px auto;
+	background-color: #ade28f;
+
+}
+
+.form div {
+	display: inline-block;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box; /* Firefox */
+	width: 100%;
+	margin: 0 auto;
+	vertical-align: top;
+}
+
+.form span {
+	display: block;
+	color: #548db1;
+}
+
+.form p span {
+	display: block;
+}
+
+.form div.error-messages {
+	display: none;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box; /* Firefox */
+	height: auto;
+	width: 100%;
+	margin: 0 auto 20px auto;
+	padding: 6px 8px;
+	color: #c10037;
+	font-size: 14px;
+	line-height: 1.4;
+	background-color: #ffe0e0;
+}
+
+.form div.error-messages p,  .form div.error-messages p:first-child {
+	padding: 0;
+	margin: 0;
+	color: #c10037;
+	font-size: 12px;
+	line-height: 1.2;
+	text-align: left;
+	background: none;
+	border: none;
+}
+
+.form span.error-messages {
+	display: none;
+	width: 100%;
+	height: auto;
+	margin: 2px 0 0 30px;
+	padding-bottom: 6px;
+	color: #c10037;
+	font-size: 12px;
+}
+
+.form label {
+	display: block;
+	width: auto;
+	margin: 0;
+	padding: 20px 0 8px 30px;
+	background: transparent;
+	font-weight: normal;
+}
+
+.form label + span {
+	margin-top: -10px;
+	margin-bottom: 10px;
+	padding-left: 30px;
+	font-size: 14px;
+	color: #71c441;
+}
+
+.form input {
+	display: block;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	width: 240px;
+	height: 40px;
+	margin: 0 30px;
+	padding-left: 10px;
+	color: #516b7a;
+	background: #ffffff;
+	border: none;
+	vertical-align: middle;
+	line-height: 40px;
+	font: normal 14px "Open Sans", sans-serif;
+}
+
+.form input:focus {
+	outline: none;
+	border: none;
+	border-bottom: 3px solid #7abd23;
+}
+
+#submit-button {
+	display: inline-block;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box; /* Firefox */
+	width: 100%;
+	height: 50px;
+	margin: 20px auto 0 auto;
+	line-height: 50px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	background: #383838;
+	font-weight: lighter;
+	color: #eeefee;
+	text-align: center;
+}
+
+#submit-button:hover {
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	text-align: center;
+	text-transform: none;
+	background-color: #656862;
+}
