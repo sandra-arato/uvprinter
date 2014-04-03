@@ -10,6 +10,16 @@
 		<link href="css/style.css" rel="stylesheet">
 	</head>
 	<body>
+		<div id="fb-root"></div>
+		<script>
+			(function(d, s, id) {
+				var js, fjs = d.getElementsByTagName(s)[0];
+				if (d.getElementById(id)) return;
+				js = d.createElement(s); js.id = id;
+				js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=147253658688244";
+				fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));
+		</script>
 		<div class="container-fluid override header">
 			<header class="row-fluid">
 				<div class="event-special"><a href="#event">Jelentkezzen nyiltnapunkra online!<span>Kattintson a reszletekert</span></a></div>
@@ -194,10 +204,27 @@
 				</div>
 			</div>
 		</div>
-		<div class="container-fluid">
+		<div class="container-fluid" id="footer">
 			<div class="row-fluid">
 				<footer>
-					Kapcsolat: Forgalmazó : Vinyl Grafik Studio H-1097 Budapest, Könyves Kálmán krt. 12-14. LURDY-HÁZ I.em 106. sz. üzlet Telefon: +36 1 217 14 75
+					<div class="span4">
+						<h4>Forgalmazó</h4>
+						<p>Vinyl Grafik Studio</p>
+						<p>Hivatalos Roland DG viszonteladó</p>
+						<span>Amennyiben ellatogat hozzank, erdeklodeset szemelyre szabott bemutatoval halaljuk meg!</span>
+						<a href="#">Idopontkeres</a>
+					</div>
+					<div class="span4">
+						<h4>Bemutatóterem</h4>
+						<p>LURDY-HÁZ I.em 106. sz. üzlet</p>
+						<p>H-1097 Budapest, </p>
+						<p>Könyves Kálmán krt. 12-14.</p>
+						<p>Nyitvatartás: H - P : 10 - 18 óra</p>
+						<p>Telefon: +36 1 217 14 75</p>
+					</div>
+					<div class="span4">
+						<div class="fb-like-box" data-href="https://www.facebook.com/pages/Vinyl-Grafik-St&#xfa;di&#xf3;/" data-width="310" data-height="220" data-colorscheme="dark" data-show-faces="true" data-header="true" data-stream="true" data-show-border="false"></div>
+					</div>
 				</footer>
 			</div>
 		</div>
