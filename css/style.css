@@ -336,8 +336,10 @@ footer #facebook span {
 }
 
 #spec table {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
 	max-width: 760px;
-	margin: 60px auto;
+	margin: 0 auto;
 	text-align: left;
 	border: 2px solid #9be271;
 	border-radius: 4px;
@@ -356,6 +358,9 @@ footer #facebook span {
 	padding: 12px 16px;
 }
 
+#spec table td:first-child {
+	min-width: 220px;
+}
 
 #spec a {
 	display: inline-block;
@@ -376,6 +381,47 @@ footer #facebook span {
 #spec a:hover {
 	text-decoration: none;
 	background-color: #9be271;
+}
+
+/* Styling extra for technical site table */
+
+#spec h2 + .accordion {
+	margin-top: 40px;
+}
+
+#spec .accordion {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	max-width: 760px;
+	min-height: 40px;
+	margin: 0 auto;
+	padding-left: 20px;
+	background-color: #9be271;
+	text-align: left;
+	line-height: 40px;
+	vertical-align: top;
+	border: 1px solid #9be271;
+}
+
+#spec .accordion + table {
+	border-top: none;
+	border-bottom: none;
+}
+
+
+#spec .accordion span {
+	display: inline-block;
+	float: right;
+	right: 1px;
+	width: 40px;
+	height: 38px;
+	text-align: center;
+	background-color: #ffffff;
+	line-height: 40px;
+}
+
+#spec tr.last {
+	border-bottom: 2px solid #9be271;
 }
 
 #event {
@@ -578,7 +624,7 @@ footer #facebook span {
 	padding: 15px 0;
 }
 
-#quality .row-fluid, #quality p {
+#quality .row-fluid, #quality p, #contact-technical .row-fluid {
 	box-sizing: border-box;
 	-moz-box-sizing: border-box; /* Firefox */
 	max-width: 980px;
@@ -598,6 +644,10 @@ footer #facebook span {
 	letter-spacing: 1px;
 }
 
+#spec h3 {
+	margin-top: 60px;
+}
+
 #spec .optional {
 	border: 2px solid #a9aca7;
 }
@@ -613,4 +663,45 @@ footer #facebook span {
 	-moz-box-sizing: border-box; /* Firefox */
 	padding-left: 60px;
 	max-width: 80px;
+}
+
+#contact-technical {
+	background: #a9aca7 url("../img/technical_bg_bw.jpg") no-repeat;
+	background-size: cover;
+	text-align: right;
+}
+
+#contact-technical .row-fluid:first-child {
+	text-align: right;
+	margin-top: 170px;
+}
+#contact-technical h3 {
+	display: inline-block;
+	width: 340px;
+	padding: 20px 0;
+	padding-right: 30px;
+	background-color: #ffffff;
+	color: #71c441;
+}
+
+#contact-technical p {
+	float: right;
+	width: 340px;
+	height: 200px;
+	background-color: #ffffff;
+}
+
+#contact-technical a {
+	display: block;
+	width: 340px;
+	height: 50px;
+	float: right;
+	text-align: center;
+	background-color: #71c441;
+	color: #ffffff;
+	text-transform: uppercase;
+	text-decoration: none;
+	line-height: 50px;
+	border-radius: 2px;
+	margin-bottom: 120px;
 }
