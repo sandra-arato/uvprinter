@@ -10,16 +10,6 @@
 		<link href="css/style.css" rel="stylesheet">
 	</head>
 	<body>
-		<div id="fb-root"></div>
-		<script>
-			(function(d, s, id) {
-				var js, fjs = d.getElementsByTagName(s)[0];
-				if (d.getElementById(id)) return;
-				js = d.createElement(s); js.id = id;
-				js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=147253658688244";
-				fjs.parentNode.insertBefore(js, fjs);
-			}(document, 'script', 'facebook-jssdk'));
-		</script>
 		<div class="container-fluid override header">
 			<header class="row-fluid">
 				<div class="event-special">
@@ -31,52 +21,93 @@
 					<a href="muszaki_adatok.html">Műszaki adatok</a>
 					<a class="active" href="#contact">Kapcsolat</a>
 				</nav>
-				<div id="header-img" class="contact"></div>
 			</header>
 		</div>
-
-		<div class="container-fluid override">
-		</div>
-		<div class="container-fluid">
+		<div class="container-fluid map" id="map-canvas"></div>
+		<div class="container-fluid" id="contact">
 			<div class="row-fluid">
-				
-			</div>
-		</div>
-		<div class="container-fluid" id="contact-technical">
-			<div class="row-fluid">
-				<div>
-					<h3><span class="glyphicon glyphicon-comment"></span>Maradt meg kerdese?</h3>
-					<p>Szakembereink szivesen valaszolnak minden felmerulo kerdesere! Vegye fel velunk a kapcsolatot, es hamarosan felkeressuk a valasszal.</p>
-					<a href="kapcsolat.html">Uzenetkuldes</a>
+				<div class="span6">
+					<h1>Kapcsolat</h1>
+					<h2>Vinyl Grafik Stúdió</h2>
+					<p>LURDY-HÁZ I.em 106. sz. üzlet</p>
+					<p>H-1097 Budapest, </p>
+					<p>Könyves Kálmán krt. 12-14.</p>
+				</div>
+				<div class="span6 last">
+					<p>Nyitvatartás: H - P : 10 - 18 óra</p>
+					<p>Telefon: +36 1 217 14 75</p>
+					<p>Fax: +36 1 217 14 75</p>
 				</div>
 			</div>
 		</div>
-		<div class="container-fluid" id="footer">
+		<div class="container-fluid" id="people">
+			<h2>Munkatarsaink</h2>
 			<div class="row-fluid">
-				<footer>
-					<div class="span4">
-						<h4>Forgalmazó</h4>
-						<p>Vinyl Grafik Stúdió</p>
-						<p>Hivatalos Roland DG viszonteladó</p>
-						<span>Latogasson el hozzank, es szakertonk segitsegevel szemelyre szabottan ismerheti meg a VersaUV LEF-20-at!</span>
-						<a href="#">Idopontkeres</a>
-					</div>
-					<div class="span4">
-						<h4>Bemutatóterem</h4>
-						<p>LURDY-HÁZ I.em 106. sz. üzlet</p>
-						<p>H-1097 Budapest, </p>
-						<p>Könyves Kálmán krt. 12-14.</p>
-						<p>Nyitvatartás: H - P : 10 - 18 óra</p>
-						<p>Telefon: +36 1 217 14 75</p>
-					</div>
-					<div class="span4" id="facebook">
-						<div class="fb-like-box" data-href="https://www.facebook.com/pages/Vinyl-Grafik-St%C3%BAdi%C3%B3/125330370876411" data-width="310" data-height="250" data-colorscheme="dark" data-show-faces="true" data-header="false" data-stream="true" data-show-border="false"></div>
-					</div>
-				</footer>
+				<div>
+					<img src="img/circle.png">
+					<h3>Szenti Ernő</h3>
+					<p>Értékesítés, termékinformációk</p>
+					<p>ernest<span>@</span>vinylgrafik.hu</p>
+					<p>+36 30 990 8080</p>
+				</div>
+				<div>
+					<img src="img/circle.png">
+					<h3>Pálfi Gergő</h3>
+					<span>Termékmenedzser</span>
+					<p>Termékinformációk, műszaki támogatás</p>
+					<p>gergo.palfi<span>@</span>vinylgrafik.hu</p>
+					<p>+36 30 999 7000</p>
+				</div>
+				<div>
+					<img src="img/circle.png">
+					<h3>Gjurova Edit</h3>
+					<p>Értékesítés, árajánlatkérés</p>
+					<p>edit<span>@</span>vinylgrafik.hu</p>
+					<p>+36 30 990 9080</p>
+				</div>
+			</div>
+			<a href="#">Uzenjen nekunk!</a>
+		</div>
+		<div class="container-fluid" id="message">
+			<h2>Uzenet kuldese</h2>
+			<div class="row-fluid">
+				<div>
+					<form class="form row-fluid">
+						<div class="span6">
+							<div>
+								<label for="name">Név:</label>
+								<input id="name" type="text" name="name">
+								<span class="error-messages">Kötelező mező!</span>
+							</div>
+							<div>
+								<label for="email">E-mail cím:</label>
+								<input id="email" type="text" name="email">
+								<span class="error-messages">Kötelező mező!</span>
+							</div>
+							<div class="phone">
+								<label for="phone">Telefonszám:</label>
+								<span>Pl.: +36201234567</span>
+								<input id="phone" class="last" type="text" name="phone">
+								<span class="error-messages">Kötelező mező!</span>
+							</div>
+							<div>
+								<label for="company">Cégnév:</label>
+								<input id="company" type="text" name="company">
+								<span class="error-messages">Kötelező mező!</span>
+							</div>
+						</div>
+						<div class="span6">
+							<textarea id="message-text" type="text" name="message-text" placeholdetr="Uzenet"></textarea>
+							<span class="error-messages">Kötelező mező!</span>
+						</div>		
+					</form>
+					<a id="send-button" href="#">Elkuldom</a>
+				</div>
 			</div>
 		</div>
 		<script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
 		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
 		<script type="text/javascript" src="js/main.js"></script>
 	</body>
 </html>
