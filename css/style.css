@@ -123,8 +123,6 @@ header nav a:hover {
 	background-size: cover;
 }
 
-
-
 header + div {
 	/*position: relative;*/
 }
@@ -624,7 +622,7 @@ footer #facebook span {
 	padding: 15px 0;
 }
 
-#quality .row-fluid, #quality p, #contact-technical .row-fluid {
+#quality .row-fluid, #quality p, #contact-technical .row-fluid,  #video .row-fluid {
 	box-sizing: border-box;
 	-moz-box-sizing: border-box; /* Firefox */
 	max-width: 980px;
@@ -650,18 +648,19 @@ footer #facebook span {
 
 #spec .optional {
 	border: 2px solid #a9aca7;
+	margin-bottom: 50px;
 }
 
 #spec .optional .success td:first-child {
 	width: auto;
-	padding-left: 30px;
+	padding-left: 20px;
 	max-width: 330px;
 }
 
 #spec .optional td:first-child {
 	box-sizing: border-box;
 	-moz-box-sizing: border-box; /* Firefox */
-	padding-left: 60px;
+	padding-left: 40px;
 	max-width: 80px;
 }
 
@@ -671,37 +670,95 @@ footer #facebook span {
 	text-align: right;
 }
 
-#contact-technical .row-fluid:first-child {
+#contact-technical .row-fluid {
 	text-align: right;
 	margin-top: 170px;
-}
-#contact-technical h3 {
-	display: inline-block;
-	width: 340px;
-	padding: 20px 0;
-	padding-right: 30px;
-	background-color: #ffffff;
+	margin-bottom: 0;
 	color: #71c441;
+	vertical-align: top;
+
 }
 
-#contact-technical p {
+#contact-technical .row-fluid div {
 	float: right;
-	width: 340px;
-	height: 200px;
+}
+
+
+#contact-technical h3 {
+	width: 360px;
+	padding: 20px 0;
+	margin: 0;
+	padding-right: 33px;
+	margin-bottom: 0;
 	background-color: #ffffff;
+}
+
+#contact-technical span {
+	padding-right: 10px;
+	top: 10px;
+	font-size: 40px
+}
+
+
+#contact-technical p {
+	width: 360px;
+	background-color: #ffffff;
+	text-align: left;
+	padding: 10px 20px 40px 20px;
+	line-height: 1.4;
+	font-size: 1.2em;
+	margin-bottom: 0;
+	color: #3e3f3c;
 }
 
 #contact-technical a {
 	display: block;
-	width: 340px;
+	width: 360px;
 	height: 50px;
-	float: right;
 	text-align: center;
 	background-color: #71c441;
 	color: #ffffff;
 	text-transform: uppercase;
 	text-decoration: none;
 	line-height: 50px;
-	border-radius: 2px;
-	margin-bottom: 120px;
+	margin-bottom: 160px;
+	margin-top: 0;
+}
+
+#contact-technical a:hover {
+	background-color: #9be271;
+}
+
+#video {
+	background-color: #71c441;
+}
+
+#video iframe {
+	margin: 50px 0 10px 0;
+}
+
+#video p {
+	max-width: 600px;
+	margin: 0 auto;
+	margin-bottom: 60px;
+	padding: 20px;
+	font-size: 1.2em;
+	line-height: 1.4;
+	color: #ffffff;
+}
+
+/* -------- Contact SITE -------- */
+
+#header-img.contact {
+	width: 100%;
+	height: 600px;
+	margin: 0;
+	margin-top: 82px;
+	background: url("../img/technical_bg_color.jpg") no-repeat center;
+	background-size: cover;
+	-webkit-filter: blur(6px);
+    -moz-filter: blur(6px);
+    -o-filter: blur(6px);
+    -ms-filter: blur(6px);
+    filter: blur(6px);
 }
