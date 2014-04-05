@@ -457,7 +457,7 @@ footer #facebook span {
 }
 
 #event h2 {
-	margin-top: 40px;
+	margin-top: 20px;
 }
 
 #event h3 {
@@ -465,7 +465,7 @@ footer #facebook span {
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	width: 300px;
-	margin-top: 40px;
+	margin-top: 20px;
 	margin-bottom: 0;
 	padding: 20px 6px;
 	font-weight: normal;
@@ -476,10 +476,47 @@ footer #facebook span {
 }
 
 #event p.invitation {
-	margin-top: 50px;
+	margin-top: 30px;
 	margin-bottom: 20px;
 	letter-spacing: 1px;
 	/*font-size: 1.1em;*/
+}
+
+#event table {
+	display: inline-block;
+	max-width: 308px;
+	vertical-align: top;
+	padding: 0 6px;
+}
+
+#event table.last {
+	margin-left: 10px;
+}
+
+#event table td {
+	padding: 6px 0;
+	line-height: 0.8;
+	min-width: 55px;
+	vertical-align: top;
+}
+
+#event table td:last-child {
+	padding: 6px 6px;
+}
+
+#event table + p {
+	color: #3d7f15;
+	font-style: italic;
+}
+
+#event table + p, #event div.span8 > p:last-child {
+	margin-top: 20px;
+}
+
+#event div.info {
+	display: inline-block;
+	width: 308px;
+	vertical-align: top;
 }
 
 #event form {
@@ -653,6 +690,20 @@ footer #facebook span {
 #technical h2 {
 	font-weight: normal;
 	margin-bottom: 30px;
+}
+
+#technical span {
+	display: block;
+	color: #71c441;
+	margin-top: 40px;
+	padding-bottom: 10px;
+	font-weight: bold;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+#technical p {
+	line-height: 1.6;
 }
 
 #quality {
