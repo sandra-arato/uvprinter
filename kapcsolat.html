@@ -1,9 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+		<!-- for Google -->
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Nyomtasson mindenre!</title>
+		<meta name="description" content="A Roland VersaUV LEF-20 nyomtató hivatalos magyarországi forgalmazójának és bemutatótermének elérhetőségei. Vegye fel a kapcsolatot munkatársainkkal!">
+		<meta name="keywords" content="UV nyomtatás, Roland, LEF-20, viszonteladó, forgalmazó">
+
+		<!-- for Social-->
+		<meta property="og:title" content="Lépjen kapcsolatba az UV nyomtatás szakértőivel" />
+		<meta property="og:site_name" content="UV nyomtatás professzionálas segítséggel" />
+		<meta property="og:url" content="http://www.uvprinter.hu/kapcsolat.html" />
+		<meta property="og:description" content="A VersaUV LEF-20 nyomtató hivatalos magyarországi forgalmazójának és bemutatótermének elérhetőségei. Vegye fel a kapcsolatot munkatársainkkal!" />
+		<meta property="og:image" content="http://www.uvprinter.hu/img/technical_bg_color.jpg" />
+
+		<title>A VersaUV LEF-20 forgalmazójának elérhetőségei</title>
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link href="css/bootstrap-theme.min.css" rel="stylesheet">
 		<link href="css/bootstrap-responsive.css" rel="stylesheet">
@@ -16,7 +27,7 @@
 					<a href="index.html#event">Jelentkezzen nyiltnapunkra online!<span>Kattintson a reszletekert</span></a>
 				</div>
 				<nav>
-					<img src="img/versauv-lef-20-logo.png">
+					<img src="img/versauv-lef-20-logo.png" alt="Versa UV printer logoja">
 					<a href="index.html">Attekinto</a>
 					<a href="muszaki_adatok.html">Műszaki adatok</a>
 					<a class="active" href="#contact">Kapcsolat</a>
@@ -44,14 +55,14 @@
 			<h2>Munkatarsaink</h2>
 			<div class="row-fluid">
 				<div>
-					<img src="img/circle.png">
+					<img src="img/circle.png" alt="Szenti Ernõ, értékesítés">
 					<h3>Szenti Ernő</h3>
 					<p>Értékesítés, termékinformációk</p>
 					<p>ernest<span>@</span>vinylgrafik.hu</p>
 					<p>+36 30 990 8080</p>
 				</div>
 				<div>
-					<img src="img/circle.png">
+					<img src="img/circle.png" alt="Pálfi Gergő, termékmenedzser">
 					<h3>Pálfi Gergő</h3>
 					<span>Termékmenedzser</span>
 					<p>Termékinformációk, műszaki támogatás</p>
@@ -59,20 +70,22 @@
 					<p>+36 30 999 7000</p>
 				</div>
 				<div>
-					<img src="img/circle.png">
+					<img src="img/circle.png" alt="Gjurova Edit, értékesítés">
 					<h3>Gjurova Edit</h3>
 					<p>Értékesítés, árajánlatkérés</p>
 					<p>edit<span>@</span>vinylgrafik.hu</p>
 					<p>+36 30 990 9080</p>
 				</div>
 			</div>
-			<a href="#">Uzenjen nekunk!</a>
+			<a href="#message">Uzenjen nekunk!</a>
 		</div>
 		<div class="container-fluid" id="message">
 			<h2>Uzenet kuldese</h2>
 			<div class="row-fluid">
 				<div>
-					<form class="form row-fluid">
+					<form class="form row-fluid" method="post" action="https://script.google.com/macros/s/AKfycbzi3hV3j4OzT_1vvwzMr9JgWwiZt975boZLTJdC7BQAhNZKOt0/exec" name="theForm" id="theForm" target="hidden_iframe">
+						<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+						<div class="error-messages">Hiba</div>
 						<div class="span6">
 							<div>
 								<label for="name">Név:</label>
@@ -93,15 +106,15 @@
 							<div>
 								<label for="company">Cégnév:</label>
 								<input id="company" type="text" name="company">
-								<span class="error-messages">Kötelező mező!</span>
 							</div>
 						</div>
 						<div class="span6">
 							<textarea id="message-text" type="text" name="message-text" placeholder="Uzenet"></textarea>
 							<span class="error-messages">Kötelező mező!</span>
-						</div>		
+						</div>	
+						<input type="submit" value="Elkuldom" id="submit-button">	
 					</form>
-					<a id="send-button" href="#">Elkuldom</a>
+
 				</div>
 			</div>
 		</div>
