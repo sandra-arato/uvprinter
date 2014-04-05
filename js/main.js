@@ -158,9 +158,11 @@ function testAndSend () {
 			$(success).html("Koszonjuk uzenetet!");
 			$("form input[type='text']").css("border-bottom", "1px solid #656862");
 			$("form textarea").css("border-bottom", "1px solid #656862");
+			ga('send','event','FormSubmit','fromContact','textMessage');
 		}
 		else {
 			$(success).html("Sikeresen regisztráltuk részvételét!");
+			ga('send','event','FormSubmit','eventReg','application');
 		}
 
 		$(success).attr("class", "container-fluid").css({

@@ -21,6 +21,17 @@
 		<link href="css/bootstrap-theme.min.css" rel="stylesheet">
 		<link href="css/bootstrap-responsive.css" rel="stylesheet">
 		<link href="css/style.css" rel="stylesheet">
+
+		<!-- for Analytics -->
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-49710352-1', 'github.com');
+			ga('send', 'pageview');
+		</script>
 	</head>
 	<body>
 		<div id="fb-root"></div>
@@ -36,13 +47,13 @@
 		<div class="container-fluid header">
 			<header class="row-fluid">
 				<div class="event-special">
-					<a href="#event">Jelentkezzen nyíltnapunkra online!<span>Kattintson a részletekért!</span></a>
+					<a href="#event" onclick="ga('send','event','Top Event Special','Index','Click');">Jelentkezzen nyíltnapunkra online!<span>Kattintson a részletekért!</span></a>
 				</div>
 				<nav>
 					<img src="img/versauv-lef-20-logo.png" alt="Versa UV printer logoja">
-					<a class="active" href="#intro">Áttekintő</a>
-					<a href="muszaki_adatok.html">Műszaki adatok</a>
-					<a href="kapcsolat.html">Kapcsolat</a>
+					<a class="active" href="#intro" onclick="ga('send','event','Navigation','fromIndex','toIndex');">Áttekintő</a>
+					<a href="muszaki_adatok.html" onclick="ga('send','event','Navigation','fromIndex','toMuszaki');">Műszaki adatok</a>
+					<a href="kapcsolat.html" onclick="ga('send','event','Navigation','fromIndex','toKapcsolat');">Kapcsolat</a>
 				</nav>
 			</header>
 		</div>
@@ -177,7 +188,7 @@
 						<td>cián, magenta, sárga, fekete, fehér, lakk</td>
 					</tr>
 				</table>
-					<a href="muszaki_adatok.html">Szeretnék többet tudni!</a>
+					<a href="muszaki_adatok.html" onclick="ga('send','event','crossPage','fromIndexSpec','toMuszaki');">Szeretnék többet tudni!</a>
 				</div>
 			</div>
 			<div class="container-fluid" id="event">
@@ -317,7 +328,7 @@
 						<p>Vinyl Grafik Stúdió</p>
 						<p>Hivatalos Roland DG viszonteladó</p>
 						<span>Látogasson el hozzánk, és szakértőnk segítségével személyre szabottan ismerheti meg a VersaUV LEF-20-at!</span>
-						<a href="kapcsolat.html#message">Időpontkérés</a>
+						<a href="kapcsolat.html#message" onclick="ga('send','event','crossPage','fromFooter','toKapcsolatMessage');">Időpontkérés</a>
 					</div>
 					<div class="span4">
 						<h4>Bemutatóterem</h4>
