@@ -247,7 +247,7 @@ footer #facebook span {
 }
 
 #intro h1 {
-	margin-top: 90px;
+	margin-top: 120px;
 }
 
 
@@ -255,7 +255,7 @@ footer #facebook span {
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	width: 100%;
-	margin-top: 20px;
+	margin-top: 50px;
 }
 
 #intro p {
@@ -647,7 +647,7 @@ footer #facebook span {
 }
 
 #technical h1 {
-	margin-top: 60px;
+	margin-top: 120px;
 }
 
 #technical h2 {
@@ -680,8 +680,9 @@ footer #facebook span {
 	letter-spacing: 1px;
 }
 
-#spec h3 {
+#spec h3.optional {
 	margin-top: 60px;
+	border: none;
 }
 
 #spec .optional {
@@ -768,6 +769,7 @@ footer #facebook span {
 }
 
 #video {
+	display: none;
 	background-color: #71c441;
 }
 
@@ -797,15 +799,20 @@ footer #facebook span {
 }
 
 #map-canvas {
-	height: 400px;
+	height: 320px;
 	width: 100%;
 	margin: 0;
+	margin-top: 82px;
 	padding: 0;
 }
 
 #contact div.last {
 	vertical-align: bottom;
 	padding-top: 131px;
+}
+
+#contact div div {
+	padding-left: 20px;
 }
 
 #people {
@@ -824,7 +831,7 @@ footer #facebook span {
 	box-sizing: border-box;
 	-moz-box-sizing: border-box; /* Firefox */
 	width: 240px;
-	margin: 0 20px;
+	margin: 20px 20px 0 20px;
 	padding: 10px;
 	border: 2px solid #9be271;
 	border-radius: 2px;
@@ -880,8 +887,16 @@ footer #facebook span {
 	box-sizing: border-box;
 	-moz-box-sizing: border-box; /* Firefox */
 	max-width: 980px;
+	height: auto;
 	margin: 0 auto;
 	padding: 0 50px;
+	background-color: #ffffff;
+}
+
+#message form .inline-column {
+	display: inline-block;
+	max-width: 49%;
+	min-width: 300px;
 }
 
 #message form label, #message form label + span {
@@ -891,7 +906,7 @@ footer #facebook span {
 #message form input {
 	display: inline-block;
 	margin: 0;
-	float: left;
+	/*float: left;*/
 	width: 300px;
 	border: 1px solid #656862;
 }
@@ -906,18 +921,22 @@ footer #facebook span {
 	-moz-box-sizing: border-box; /* Firefox */
 	width: 100%;
 	height: 329px;
-	margin: 50px 0;
+	margin: 50px 0 0 0;
 	display: inline-block;
 	padding: 10px;
 }
 
-#send-button {
+#message form input + span, #message form textarea + span {
+	margin-left: 0;
+}
+
+#message form input#send-button {
 	display: block;
 	width: 300px;
 	height: 50px;
 	padding: 0 20px;
 	line-height: 50px;
-	margin: 0 auto 50px auto;
+	margin: 30px auto 50px auto;
 	text-transform: uppercase;
 	letter-spacing: 2px;
 	background: #3d7f15;
@@ -928,6 +947,13 @@ footer #facebook span {
 	border-radius: 2px;
 }
 
-#send-button:hover {
+#message form input#send-button:hover {
 	background-color: #659349;
+}
+
+
+@media (min-width: 640px) {
+	#video {
+		display: block;
+	}
 }
