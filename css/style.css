@@ -62,7 +62,8 @@ h1 {
 }
 
 header {
-	height: 82px;
+	height: 140px;
+	background-color: #ffffff;
 }
 
 header nav {
@@ -73,15 +74,16 @@ header nav {
 	min-width: 530px;
 	height: 60px;
 	margin: 0 auto;
-	text-align: right;
+	text-align: left;
 	line-height: 60px;
-	/*overflow: hidden;*/
 }
 
 header nav img {
+	display: block;
 	height: 50px;
-	float: left;
+	/*float: left;*/
 	margin-top: 8px;
+	padding-left: 8px;
 }
 
 header div.event-special {
@@ -113,13 +115,17 @@ header div.event-special + nav {
 	top: 22px;
 }
 
+
+
 header nav a {
+	/*display: block;*/
 	display: inline-block;
 	height: 60px;
 	line-height: 60px;
 	padding: 0 15px;
 	margin: 0;
 	color: #656862;
+	background-color: #ffffff;
 }
 
 header nav a.active {
@@ -244,6 +250,7 @@ footer #facebook span {
 	text-align: left;
 	padding-bottom: 50px;
 	padding-right: 2em;
+	padding-left: 1em;
 }
 
 #intro h1 {
@@ -347,12 +354,14 @@ footer #facebook span {
 }
 
 #applications p.insta {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	/*width: 300px;*/
 	margin: 30px auto 0 auto;
 	padding: 0.8em;
 	border: 1px solid #a9aca7;
 	border-radius: 4px;
 	font-size: 1em;
-	/*line-height: 1.2;*/
 	color: #656862;
 }
 
@@ -395,15 +404,11 @@ footer #facebook span {
 	padding: 12px 16px;
 }
 
-#spec table td:first-child {
-	min-width: 220px;
-}
-
 #spec a {
 	display: inline-block;
 	box-sizing: border-box;
 	-moz-box-sizing: border-box; /* Firefox */
-	width: 420px;
+	width: 380px;
 	height: 50px;
 	margin: 50px auto 60px auto;
 	line-height: 50px;
@@ -1022,7 +1027,31 @@ footer #facebook span {
 
 
 @media (min-width: 640px) {
+	header {
+		height: 82px;
+	}
+	header nav {
+		text-align: right;
+	}
+
+	header nav img {
+		padding-left: 0;
+		float: left;
+	}
+
+	#intro {
+		padding-left: 0;
+	}
+
 	#video {
 		display: block;
+	}
+
+	#spec table td:first-child {
+		min-width: 220px;
+	}
+
+	#spec a {
+		width: 420px;
 	}
 }
