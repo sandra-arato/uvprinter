@@ -255,7 +255,8 @@ footer #facebook span {
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	width: 100%;
-	margin-top: 50px;
+	margin-top: 126px;
+	padding-right: 40px;
 }
 
 #intro p {
@@ -273,6 +274,25 @@ footer #facebook span {
 	width: 100%;
 	vertical-align: top;
 	margin: 10px 0;
+}
+
+#video {
+	display: none;
+	background-color: #71c441;
+}
+
+#video iframe {
+	margin: 100px 0 10px 0;
+}
+
+#video p {
+	max-width: 600px;
+	margin: 0 auto;
+	margin-bottom: 60px;
+	padding: 20px;
+	font-size: 1.2em;
+	line-height: 1.4;
+	color: #ffffff;
 }
 
 #applications {
@@ -385,7 +405,7 @@ footer #facebook span {
 	-moz-box-sizing: border-box; /* Firefox */
 	width: 420px;
 	height: 50px;
-	margin: 20px auto 60px auto;
+	margin: 50px auto 60px auto;
 	line-height: 50px;
 	text-transform: uppercase;
 	letter-spacing: 2px;
@@ -444,7 +464,7 @@ footer #facebook span {
 #event {
 	text-align: left;
 	background-color: #71c441;
-	padding: 30px 0;
+	padding: 30px 0 60px 0;
 	color: #ffffff;
 }
 
@@ -475,6 +495,11 @@ footer #facebook span {
 	border-bottom: 2px solid #71c441;
 }
 
+#event h4.center {
+	font-size: 1.2em;
+	letter-spacing: 2px;
+}
+
 #event p.invitation {
 	margin-top: 30px;
 	margin-bottom: 20px;
@@ -484,18 +509,24 @@ footer #facebook span {
 
 #event table {
 	display: inline-block;
-	max-width: 308px;
+	max-width: 400px;
 	vertical-align: top;
 	padding: 0 6px;
+	margin-left: 10px;
+	margin-top: 10px;
 }
 
 #event table.last {
-	margin-left: 10px;
+	margin-top: 10px;
+}
+#event table tr:first-child td:last-child {
+	padding: 0;
+	/*color: #9be271;*/
 }
 
 #event table td {
 	padding: 6px 0;
-	line-height: 0.8;
+	line-height: 1.2;
 	min-width: 55px;
 	vertical-align: top;
 }
@@ -630,6 +661,7 @@ footer #facebook span {
 	width: 20px;
 	padding-right: 0;
 	margin-right: 6px;
+	background-color: #ade28f;
 }
 
 .form input[type="radio"] + label {
@@ -738,7 +770,7 @@ footer #facebook span {
 
 #spec .optional {
 	border: 2px solid #a9aca7;
-	margin-bottom: 50px;
+	/*margin-bottom: 50px;*/
 }
 
 #spec .optional .success td:first-child {
@@ -807,36 +839,21 @@ footer #facebook span {
 	height: 50px;
 	text-align: center;
 	background-color: #71c441;
-	color: #ffffff;
 	text-transform: uppercase;
-	text-decoration: none;
+	letter-spacing: 2px;
+	background: #72c441;
+	font-weight: lighter;
+	color: #ffffff;
 	line-height: 50px;
 	margin-bottom: 160px;
 	margin-top: 0;
+	text-decoration: none;
 }
 
 #contact-technical a:hover {
 	background-color: #9be271;
 }
 
-#video {
-	display: none;
-	background-color: #71c441;
-}
-
-#video iframe {
-	margin: 50px 0 10px 0;
-}
-
-#video p {
-	max-width: 600px;
-	margin: 0 auto;
-	margin-bottom: 60px;
-	padding: 20px;
-	font-size: 1.2em;
-	line-height: 1.4;
-	color: #ffffff;
-}
 
 /* -------- Contact SITE -------- */
 
@@ -975,6 +992,7 @@ footer #facebook span {
 	margin: 50px 0 0 0;
 	display: inline-block;
 	padding: 10px;
+	border: 1px solid #656862;
 }
 
 #message form input + span, #message form textarea + span {
