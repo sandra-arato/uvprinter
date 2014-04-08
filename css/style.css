@@ -667,12 +667,15 @@ footer #facebook span {
 	padding-right: 0;
 	margin-right: 6px;
 	background-color: #ade28f;
+	margin-left: 20px;
+	margin-top: -8px;
 }
 
-.form input[type="radio"] + label {
+.form .radio label {
 	display: inline-block;
 	width: auto;
 	padding: 0;
+	vertical-align: top;
 }
 
 
@@ -910,7 +913,12 @@ footer #facebook span {
 	border-radius: 2px;
 	vertical-align: top;
 }
-
+#people img {
+	width: 120px;
+	height: 120px;
+	border-radius: 60px;
+	border: none;
+}
 #people div div p {
 	max-width: 190px;
 	margin: 10px auto;
@@ -1054,5 +1062,27 @@ footer #facebook span {
 
 	#spec a {
 		width: 420px;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 979px){
+	#event div div.span4 h3 {
+		width: 100%;
+	}
+	#event div div.span4 form {
+		width: 100%;
+		padding-bottom: 6px;
+	}
+	#event div div.span4 form input {
+		margin: 6px auto;
+		width: 220px;
+	}
+	#event div div.span4 form input[type="radio"] {
+		margin: -8px 4px 6px 8px;
+		width: 20px;
+	}
+	#event div div.span4 form input[type="submit"] {
+		display: block;
+		margin: 6px auto;
 	}
 }

@@ -155,7 +155,7 @@ function testAndSend () {
 		// $("form input[type='radio']").attr("checked", false);
 
 		if ($("form textarea").length > 0) {
-			$(success).html("Koszonjuk uzenetet!");
+			$(success).html("Köszönjük üzenetét!");
 			$("form input[type='text']").css("border-bottom", "1px solid #656862");
 			$("form textarea").css("border-bottom", "1px solid #656862");
 			ga('send','event','FormSubmit','fromContact','textMessage');
@@ -175,8 +175,8 @@ function testAndSend () {
 			"margin-left": "-490px",
 			"padding": "0 10px",
 			"line-height": "60px", 
-			"color": "#74c441",
-			"background-color": "#ffffff",
+			"color": "#ffffff",
+			"background-color": "#3d7f15",
 			"text-align": "center",
 			"z-index": "650"
 		});
