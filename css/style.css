@@ -481,8 +481,17 @@ footer #facebook span {
 	padding: 50px 10px 0 10px;
 }
 
+#event img {
+	position: absolute;
+	display: inline-block;
+	width: 250px;
+	clip:rect(0px,300px,460px,0px);
+}
+
 #event h2 {
-	margin-top: 20px;
+	display: inline-block;
+	margin-top: 66px;
+	padding-left: 240px;
 }
 
 #event h3 {
@@ -503,10 +512,12 @@ footer #facebook span {
 #event h4.center {
 	font-size: 1.2em;
 	letter-spacing: 2px;
+	/*margin-top: 30px;*/
 }
 
 #event p.invitation {
-	margin-top: 30px;
+	display: inline-block;
+	margin-top: 60px;
 	margin-bottom: 20px;
 	letter-spacing: 1px;
 	/*font-size: 1.1em;*/
