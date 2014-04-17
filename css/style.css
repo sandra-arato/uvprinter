@@ -523,6 +523,13 @@ footer #facebook span {
 	/*font-size: 1.1em;*/
 }
 
+#event p.border {
+	padding: 0.8em;
+	border: 2px solid #ade28f;
+	border-radius: 4px;
+	line-height: 1.4;
+}
+
 #event table {
 	display: inline-block;
 	max-width: 400px;
@@ -553,11 +560,15 @@ footer #facebook span {
 
 #event table + p {
 	color: #3d7f15;
-	font-style: italic;
 }
 
 #event table + p, #event div.span8 > p:last-child {
 	margin-top: 20px;
+}
+
+#event #betelt span {
+	font-style: italic;
+	color: #c10037;
 }
 
 #event div.info {
@@ -572,7 +583,6 @@ footer #facebook span {
 	width: 300px;
 	margin-bottom: 20px;
 	background-color: #ade28f;
-
 }
 
 .form div {

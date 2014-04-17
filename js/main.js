@@ -129,9 +129,9 @@ function contactFormValidation() {
 		}
 	}
 
-	if (radioGroup.length > 0) {
-		 checkRadio(radioGroup);
-	}
+	// if (radioGroup.length > 0) {
+	// 	 checkRadio(radioGroup);
+	// }
    
 
 	if ($("div.error-messages").css("display") == "none") {
