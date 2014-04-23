@@ -55,15 +55,16 @@ h1 {
 	top: 0;
 	right: 0;
 	width: 100%;
-	height: 82px;
+	height: 121px;
 	background-color: #ffffff;
 	box-shadow: 0 2px 22px #656862;
 	z-index: 300;
 }
 
 header {
-	height: 140px;
+	height: 121px;
 	background-color: #ffffff;
+	overflow: hidden; 
 }
 
 header nav {
@@ -72,10 +73,10 @@ header nav {
 	-moz-box-sizing: border-box;
 	max-width: 980px;
 	min-width: 530px;
-	height: 60px;
+	height: 62px;
 	margin: 0 auto;
 	text-align: left;
-	line-height: 60px;
+	line-height: 62px;
 }
 
 header nav img {
@@ -120,7 +121,7 @@ header div.event-special + nav {
 header nav a {
 	/*display: block;*/
 	display: inline-block;
-	height: 60px;
+	height: 62px;
 	line-height: 60px;
 	padding: 0 15px;
 	margin: 0;
@@ -142,14 +143,10 @@ header nav a:hover {
 	width: 100%;
 	height: 600px;
 	margin: 0;
-	margin-top: 82px;
+	margin-top: 62px;
 	background: url("../img/intro-bg.jpg") no-repeat center;
 	background-size: cover;
 	overflow: hidden;
-}
-
-header + div {
-	/*position: relative;*/
 }
 
 .container-fluid {
@@ -528,6 +525,7 @@ footer #facebook span {
 	border: 2px solid #ade28f;
 	border-radius: 4px;
 	line-height: 1.4;
+	text-align: center;
 }
 
 #event table {
@@ -1057,8 +1055,11 @@ footer #facebook span {
 
 
 @media (min-width: 640px) {
+	.container-fluid.header {
+		height: 62px;
+	}
 	header {
-		height: 82px;
+		height: 62px;
 	}
 	header nav {
 		text-align: right;
