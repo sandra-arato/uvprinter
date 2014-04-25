@@ -1,4 +1,4 @@
-function clickPhoto(e) {
+function clickPhoto(photo) {
 	console.log("click!");
 	console.log($(this));
 }
@@ -13,7 +13,7 @@ function initialize() {
 	var html = new EJS({url: 'js/photos.ejs'}).render(dataGallery);
 	$(html).appendTo($("#gallery div"));
 
-	$(".photo").click(function (e) {clickPhoto(e) });
+	$(".photo").click(clickPhoto($(this));
 
 }
 

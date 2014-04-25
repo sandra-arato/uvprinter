@@ -955,8 +955,20 @@ footer #facebook span {
 	box-sizing: border-box;
 	-moz-box-sizing: border-box; /* Firefox */
 	max-width: 220px;
-	margin: 0 20px;
+	margin: 0 5px;
+	overflow: hidden;
+	text-align: center;
+	line-height: 320px;
 }
+
+.photo img {
+	width: 100%;
+}
+
+.photo img:hover {
+	width: 120%;
+}
+
 
 /* -------- Mediaqueries -------- */
 
