@@ -4,7 +4,7 @@ function initialize() {
 	// load gallery images with embedded JS
 	var dataGallery	= {
 		title: "Kepek",
-		supplies: ["domestos", "mososzer", "valami mas"]
+		photos: ["1", "2", "3"]
 	}
 	var html = new EJS({url: 'js/photos.ejs'}).render(dataGallery);
 	$(html).appendTo($("#gallery div"));
