@@ -955,10 +955,11 @@ footer #facebook span {
 	box-sizing: border-box;
 	-moz-box-sizing: border-box; /* Firefox */
 	max-width: 220px;
+	height: 165px;
 	margin: 0 5px;
 	overflow: hidden;
 	text-align: center;
-	line-height: 320px;
+	margin-bottom: 8px;
 }
 
 .photo img {

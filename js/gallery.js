@@ -13,7 +13,7 @@ function initialize() {
 	var html = new EJS({url: 'js/photos.ejs'}).render(dataGallery);
 	$(html).appendTo($("#gallery div"));
 
-	$(".photo").click(clickPhoto($(this)));
+	$(".photo img").click(clickPhoto(this);
 
 }
 
