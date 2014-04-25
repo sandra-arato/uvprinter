@@ -31,35 +31,6 @@ function mapLoad () {
 	google.maps.event.addDomListener(window, 'resize', function() { map.setCenter(new google.maps.LatLng(47.469935, 19.083579));});
 }
 
-function checkRadio(radioGroup) {
-	radioGroup.valid = function() {
-		for (var i in radioGroup) {
-			if (i<3 && radioGroup[i].checked) {
-				return i;
-			} 
-		}
-		return false;
-	}();
-
-	var errorMessageR = $("#radio-error");
-	var labelR = $("p.list-radio");
-	if (radioGroup.valid) {
-		radioGroup.css("border-bottom", "3px solid #7abd23");
-		errorMessageR.css("display", "none");
-	}
-	else {
-		errorMessageR.html("Kötelező mező!");
-		radioGroup.css("border-bottom", "3px solid #c10037");
-		$("#" + radioGroup.attr("id") + ":focus").css("border-bottom", "3px solid #7abd23");
-		errorMessageR.css("display", "block");
-		if (errorMessageR.html() !== null ) {
-			$("div.error-messages").append(
-			"<p>" + labelR.html() + " " + errorMessageR.html() + "</p>");
-		};
-		$("div.error-messages").css("display", "block");
-	}
-}
-
 function checkInputField(inputField, regex) {
 	inputField.valid = false;
 	var errorMessage = inputField.next("span.error-messages");
@@ -209,8 +180,15 @@ function initialize() {
 	smoothScroll();
 	var sent = $("form").submit(function() { return testAndSend(); });
 	mapLoad();
-	
-	// $("#submit-button").click(function() { contactFormValidation(); return false; })
+	var dataGallery	= {
+		title: "Cleaning Supplies",
+		supplies: ["domestos", "mososzer", "valami mas"]
+	}
+
+	if (true) {};
+	var html = new EJS({url: 'js/cleaning.ejs'}).render(dataGallery);
+
+	$(html).appendTo($("#gallery div"));
 	
 }
 
