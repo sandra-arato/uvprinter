@@ -6,8 +6,8 @@ function initialize() {
 		title: "Kepek",
 		photos: ["1", "2", "3"]
 	}
-	var html = new EJS({url: 'js/photos.ejs'}).render();
-	$(html).appendTo($("#gallery div"));
+	var html = new EJS({url: 'js/photos.ejs'}).render(dataGallery);
+	$(html).appendTo($("#gallery"));
 
 	// set large photo div height 
 	$("#large-photo").css("height", $("#large-photo").height() + "px");
