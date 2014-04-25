@@ -891,6 +891,43 @@ footer #facebook span {
 }
 
 
+/* -------- Nyiltnap SITE -------- */
+
+#testimonials {
+	background: #71c441;
+	padding-bottom: 50px;
+}
+
+
+#testimonials div.row-fluid {
+	width: 400px;
+	margin: 0 auto;
+	background: transparent;
+}
+
+#testimonials div div {
+	width: 320px;
+	height: 200px;
+	margin: 0;
+	padding: 0;
+	line-height: 170px;
+	text-align: center;
+	float: left;
+}
+
+#testimonials div div.red { background: red; }
+#testimonials div div.green { background: green; }
+#testimonials div div.blue { background: blue; }
+#testimonials div div.pink { background: pink; }
+#testimonials div div.grey { background: grey; }
+#testimonials div div.black { background: black; }
+#testimonials div div.aquamarine { background: aquamarine; }
+#testimonials div div.orange { background: orange; }
+#testimonials div div.yellow { background: yellow; }
+
+/* -------- Mediaqueries -------- */
+
+
 @media (min-width: 640px) {
 	.container-fluid.header {
 		height: 62px;
@@ -922,6 +959,9 @@ footer #facebook span {
 	#spec a {
 		width: 420px;
 	}
+	#testimonials div.row-fluid {
+		width: 640px;
+	}
 }
 
 @media (min-width: 768px) and (max-width: 979px){
@@ -943,5 +983,11 @@ footer #facebook span {
 	#event div div.span4 form input[type="submit"] {
 		display: block;
 		margin: 6px auto;
+	}
+}
+
+@media (min-width: 980px) {
+	#testimonials div.row-fluid {
+		width: 980px;
 	}
 }

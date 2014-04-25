@@ -1,0 +1,11 @@
+<h1><%= title %></h1>
+<div id="large-photo">
+	<img src="http://lorempixel.com/200/300/nightlife/1">
+</div>
+<div class="photo-tiles">
+    <% for(var i=0; i<10; i++) { %>
+        <div id="photo">
+            <img src="http://lorempixel.com/200/300/nightlife/<%+i%>" />
+        </div>
+    <% } %>
+</div>
