@@ -959,21 +959,30 @@ footer #facebook span {
 
 #large-photo span {
 	display: inline-block;
-	font-size: 40px;
-	line-height: 42px;
 	height: 42px;
+	width: 42px;
+	line-height: 42px;
+	margin-top: -50px;
+	border-radius: 21px;
+	font-size: 26px;
+	color: #656862;
+}
+
+#large-photo span:hover {
+	background-color: rgba(240, 250, 240, 0.3);
+	color: #3e3f3c;
 }
 
 #large-photo span#back {
 	position: relative;
-	bottom: 20px;
-	left: 0;
+	float: left;
+	margin-left: 8px;
 }
 
 #large-photo span#forward {
 	position: relative;
-	bottom: 20px;
-	right: 0;
+	float: right;
+	margin-right: 8px;
 }
 
 

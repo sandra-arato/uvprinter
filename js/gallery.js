@@ -6,7 +6,7 @@ function initialize() {
 		title: "Kepek",
 		photos: ["1", "2", "3"]
 	}
-	var html = new EJS({url: 'js/photos.ejs'}).render(dataGallery);
+	var html = new EJS({url: 'js/photos.ejs'}).render();
 	$(html).appendTo($("#gallery div"));
 
 	// set large photo div height 
