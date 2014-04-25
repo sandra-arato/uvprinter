@@ -941,6 +941,17 @@ footer #facebook span {
 #testimonials div div.orange { background: orange; }
 #testimonials div div.yellow { background: yellow; }
 
+
+#large-photo {
+	width: 100%;
+	margin: 0 auto;
+	padding-bottom: 60px;
+}
+
+#large-photo img {
+	width: 100%;
+}
+
 .photo-tiles.row-fluid {
 	display: block;
 	box-sizing: border-box;
@@ -1035,5 +1046,8 @@ footer #facebook span {
 @media (min-width: 980px) {
 	#testimonials div.row-fluid {
 		width: 980px;
+	}
+	#large-photo {
+		max-width: 800px;
 	}
 }

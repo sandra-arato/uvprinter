@@ -6,6 +6,15 @@ function clickPhoto(photo) {
 
 
 function initialize() {
+
+	$("div.photo img").click(function () {
+		console.log("click!!");
+		var indexOfPhoto = $(this).attr("src").split("/")[6];
+		console.log("this is " + indexOfPhoto);
+		$("#large-photo").html("<img src=http://lorempixel.com/800/600/nightlife/" + indexOfPhoto + " />")
+
+	})
+
 	var dataGallery	= {
 		title: "Kepek",
 		supplies: ["domestos", "mososzer", "valami mas"]
@@ -13,8 +22,7 @@ function initialize() {
 	var html = new EJS({url: 'js/photos.ejs'}).render(dataGallery);
 	$(html).appendTo($("#gallery div"));
 
-	$(".photo img").click(clickPhoto(this));
-
+	
 }
 
 $(document).ready(initialize);
