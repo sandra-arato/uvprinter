@@ -893,11 +893,27 @@ footer #facebook span {
 
 /* -------- Nyiltnap SITE -------- */
 
+#event-story {
+	margin-top: 62px;
+	padding-top: 30px;
+	padding-bottom: 60px;
+}
+
+#event-story p {
+	max-width: 980px;
+	margin: 10px auto;
+	line-height: 1.3;
+}
+
+#event-story p:first-child {
+	font-size: 22px;
+	line-height: 1.7;
+}
+
 #testimonials {
 	background: #71c441;
 	padding-bottom: 50px;
 }
-
 
 #testimonials div.row-fluid {
 	width: 400px;
@@ -924,6 +940,23 @@ footer #facebook span {
 #testimonials div div.aquamarine { background: aquamarine; }
 #testimonials div div.orange { background: orange; }
 #testimonials div div.yellow { background: yellow; }
+
+.photo-tiles.row-fluid {
+	display: block;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box; /* Firefox */
+	max-width: 980px;
+	margin: 0 auto;
+}
+
+.photo {
+	position: relative;
+	display: inline-block;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box; /* Firefox */
+	max-width: 220px;
+	margin: 0 20px;
+}
 
 /* -------- Mediaqueries -------- */
 
