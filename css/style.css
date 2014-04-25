@@ -966,6 +966,7 @@ footer #facebook span {
 	border-radius: 21px;
 	font-size: 26px;
 	color: #656862;
+	z-index: 150;
 }
 
 #large-photo span:hover {
