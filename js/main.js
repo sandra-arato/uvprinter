@@ -1,6 +1,6 @@
 var map;
 
-function mapLoad () {
+function mapLoad() {
 	var mapOptions = {
 		zoom: 12,
 		center: new google.maps.LatLng(47.469935, 19.083579),
@@ -117,7 +117,7 @@ function contactFormValidation() {
 }
 
 
-function testAndSend () {
+function testAndSend() {
 	var readytoSend = contactFormValidation();
 	if (readytoSend) {
 		var success = document.createElement("div");
@@ -160,7 +160,7 @@ function testAndSend () {
 	return false;
 }
 
-function smoothScroll () {
+function smoothScroll() {
 	$("a[href*=#]:not([href=#])").click(function() {
 		if (location.pathname.replace(/^\//,"") == this.pathname.replace(/^\//,"") && location.hostname == this.hostname) {
 			var target = $(this.hash);
@@ -180,16 +180,6 @@ function initialize() {
 	smoothScroll();
 	var sent = $("form").submit(function() { return testAndSend(); });
 	mapLoad();
-	var dataGallery	= {
-		title: "Cleaning Supplies",
-		supplies: ["domestos", "mososzer", "valami mas"]
-	}
-
-	if (true) {};
-	var html = new EJS({url: 'js/cleaning.ejs'}).render(dataGallery);
-
-	$(html).appendTo($("#gallery div"));
-	
 }
 
 $(document).ready(initialize);
