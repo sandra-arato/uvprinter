@@ -48,11 +48,11 @@ function initialize() {
 	$(window).resize(function () {
 		$("#large-photo").css("height", $("#large-photo img").height() + "px");		
 	});
+	
+	renderThumbnails();
 
 	$("#large-photo span").click(function () { arrowNav(this); });
 	$("div.photo img").click(function () { thumbnailClick(this); });
-	renderThumbnails();
-	photoNavigation();
 
 }
 
