@@ -1,6 +1,7 @@
 function renderThumbnails () {
 	// load gallery images with embedded JS
-	var html = new EJS({url: '../js/photos.ejs'});
+	var data = {};
+	var html = new EJS({url: '../js/photos.ejs'}).render(data);
 	$(html).appendTo($("#gallery"));
 }
 
