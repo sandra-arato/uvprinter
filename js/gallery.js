@@ -45,10 +45,10 @@ function initialize() {
 		$("#large-photo").css("height", $("#large-photo img").height() + "px");		
 	});
 	
-	// renderThumbnails();
+	renderThumbnails();
 
 	$("#large-photo span").click(function () { arrowNav(this); });
-	// $("div.photo img").click(function () { thumbnailClick(this); });
+	$("div.photo img").click(function () { thumbnailClick(this); });
 
 }
 
