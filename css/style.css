@@ -946,6 +946,45 @@ footer #facebook span {
 #testimonials div div.orange { background: orange; }
 #testimonials div div.yellow { background: yellow; }
 
+.flip-container {
+	perspective: 1000;
+	overflow: visible;
+}
+	.flip-container:hover .flipper, .flip-container.hover .flipper {
+		transform: rotateY(180deg);
+	}
+
+.flip-container, .front, .back {
+	width: 320px;
+	height: 480px;
+}
+
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+	position: relative;
+}
+
+.front, .back {
+	backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.front {
+	z-index: 2;
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+}
+
+.flip-container:hover .flipper, .flip-container.hover .flipper, .flip-container.flip .flipper {
+	transform: rotateY(180deg);
+}
+
 #gallery h2 {
 	margin-bottom: 30px;
 }
@@ -999,7 +1038,7 @@ footer #facebook span {
 	box-sizing: border-box;
 	-moz-box-sizing: border-box; /* Firefox */
 	max-width: 980px;
-	margin: 0 auto;
+	margin: 40px auto;
 }
 
 .photo {
@@ -1014,6 +1053,7 @@ footer #facebook span {
 	overflow: hidden;
 	text-align: center;
 	margin-bottom: 8px;
+	cursor: pointer;
 }
 
 .photo img {
