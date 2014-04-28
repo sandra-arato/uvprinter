@@ -958,6 +958,8 @@ footer #facebook span {
 #large-photo img {
 	position: absolute;
 	height: 532px;
+	width: auto;
+	max-width: 100%;
 	margin: 0 auto;
 	margin-left: -177px;
 }
