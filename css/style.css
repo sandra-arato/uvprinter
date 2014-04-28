@@ -936,53 +936,55 @@ footer #facebook span {
 	float: left;
 }
 
-#testimonials div div.red { background: red; }
-#testimonials div div.green { background: green; }
-#testimonials div div.blue { background: blue; }
-#testimonials div div.pink { background: pink; }
-#testimonials div div.grey { background: grey; }
-#testimonials div div.black { background: black; }
-#testimonials div div.aquamarine { background: aquamarine; }
-#testimonials div div.orange { background: orange; }
-#testimonials div div.yellow { background: yellow; }
-
-.flip-container {
+#testimonials .test-container {
 	perspective: 1000;
-	overflow: visible;
+	overflow: hidden;
 }
-	.flip-container:hover .flipper, .flip-container.hover .flipper {
-		transform: rotateY(180deg);
+	.test-container:hover .quote, .test-container.hover .quote {
+		-ms-transform: translateY(-100px);
+		-webkit-transform: translateY(-100px);
+		transform: translateY(-100px);
 	}
 
-.flip-container, .front, .back {
-	width: 320px;
-	height: 480px;
-}
-
-.flipper {
+#testimonials div {
+	-webkit-transition: 0.6s;
 	transition: 0.6s;
+	-webkit-transform-style: preserve-3d;
 	transform-style: preserve-3d;
 	position: relative;
 }
 
-.front, .back {
-	backface-visibility: hidden;
-	position: absolute;
+#testimonials .front {
+	position: relative;
 	top: 0;
 	left: 0;
-}
-
-.front {
 	z-index: 2;
+	background-color: #566268;
+	color: #ffffff;
+	line-height: 1;
+	padding-top: 140px;
 }
 
-/* back, initially hidden pane */
-.back {
-	transform: rotateY(180deg);
+#testimonials .quote {
+	position: relative;
+	bottom: 0;
+	left: 0;
+	margin: 0;
+	padding: 0 10px 240px 10px;
+	border: none;
+	-ms-transform: translateY(-70px);
+	-webkit-transform: translateY(-70px);
+	transform: translateY(-70px);
+	background-color: #ffffff;
+	line-height: 1.2;
 }
 
-.flip-container:hover .flipper, .flip-container.hover .flipper, .flip-container.flip .flipper {
-	transform: rotateY(180deg);
+#testimonials .test-container:hover div, 
+#testimonials .test-container.hover div, 
+#testimonials .test-container.flip div {
+	-ms-transform: translateY(-100px);
+	-webkit-transform: translateY(-100px);
+	transform: translateY(-100px);
 }
 
 #gallery h2 {
