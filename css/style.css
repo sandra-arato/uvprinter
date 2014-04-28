@@ -959,6 +959,7 @@ footer #facebook span {
 	position: absolute;
 	height: 532px;
 	margin: 0 auto;
+	margin-left: -177px;
 }
 
 #large-photo span {
@@ -973,6 +974,7 @@ footer #facebook span {
 
 #large-photo span:hover {
 	color: #3e3f3c;
+	cursor: pointer;
 }
 
 #large-photo span#back {
@@ -1000,6 +1002,7 @@ footer #facebook span {
 	box-sizing: border-box;
 	-moz-box-sizing: border-box; /* Firefox */
 	max-width: 220px;
+	width: auto;
 	height: 165px;
 	margin: 0 5px;
 	overflow: hidden;
@@ -1012,7 +1015,9 @@ footer #facebook span {
 }
 
 .photo img:hover {
-	width: 120%;
+	height: 160px;
+	-webkit-transition: width 0.4s, height 0.4s,-webkit-transform 0.4s;  /* For Safari 3.1 to 6.0 */
+	transition: width 0.4s, height 0.4s, transform 0.4s;
 }
 
 
