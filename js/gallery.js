@@ -1,28 +1,24 @@
 function renderThumbnails () {
 	// load gallery images with embedded JS
-	var dataGallery	= {
-		title: "Kepek",
-		photos: ["1", "2", "3"]
-	}
-	var html = new EJS({url: 'js/photos.ejs'}).render(dataGallery);
+	var html = new EJS({url: 'js/photos.ejs'});
 	$(html).appendTo($("#gallery"));
 }
 
 function arrowNav(direction) {
 	console.log("click direction", direction.id);
-	var currentPhotoIndex = $("#large-photo img").attr("src").split("/")[6];
+	var currentPhotoIndex = $("#large-photo img").attr("src").split("/")[3].split("_")[2].split(".")[0];
 	var indexOfPhoto;
 	if (direction.id === "back") {
 		indexOfPhoto = parseInt(currentPhotoIndex) - 1;
 		console.log("Going back from " + currentPhotoIndex + " to " + indexOfPhoto);
 		if (indexOfPhoto < 1) {
-			indexOfPhoto = 10;
+			indexOfPhoto = 75;
 		}
 	}
 	else if (direction.id === "forward") {
 		indexOfPhoto = parseInt(currentPhotoIndex) + 1;
 		console.log("Going forward from " + currentPhotoIndex + " to " + indexOfPhoto);
-		if (indexOfPhoto > 10) {
+		if (indexOfPhoto > 75) {
 			indexOfPhoto = 1;
 		}
 	}
@@ -31,13 +27,13 @@ function arrowNav(direction) {
 		return;
 	}
 
-	$("#large-photo img").attr("src", "http://lorempixel.com/800/600/nightlife/" + indexOfPhoto );
+	$("#large-photo img").attr("src", "../img/gallery/lef20_nyiltnap_" + indexOfPhoto + ".jpg" );
 }
 
 function thumbnailClick(photo) {
 	// reload large photo div content with clicked photo
 	var indexOfPhoto = $(photo).attr("src").split("/")[6];
-	$("#large-photo img").attr("src", "http://lorempixel.com/800/600/nightlife/" + indexOfPhoto );
+	$("#large-photo img").attr("src", "../img/gallery/lef20_nyiltnap_" + indexOfPhoto + ".jpg" );
 }
 
 
@@ -49,10 +45,10 @@ function initialize() {
 		$("#large-photo").css("height", $("#large-photo img").height() + "px");		
 	});
 	
-	renderThumbnails();
+	// renderThumbnails();
 
 	$("#large-photo span").click(function () { arrowNav(this); });
-	$("div.photo img").click(function () { thumbnailClick(this); });
+	// $("div.photo img").click(function () { thumbnailClick(this); });
 
 }
 
