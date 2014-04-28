@@ -953,7 +953,6 @@ footer #facebook span {
 #large-photo {
 	width: 100%;
 	margin: 0 auto;
-	background: red;
 }
 
 #large-photo img {
@@ -973,7 +972,6 @@ footer #facebook span {
 }
 
 #large-photo span:hover {
-	background-color: rgba(240, 250, 240, 0.3);
 	color: #3e3f3c;
 }
 

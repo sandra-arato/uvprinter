@@ -29,12 +29,14 @@ function arrowNav(direction) {
 	}
 
 	$("#large-photo img").attr("src", "../img/gallery/lef20_nyiltnap_" + indexOfPhoto + ".jpg" );
+	$("#large-photo img").css("margin-left", "-" + $("#large-photo img").width()/2 + "px");
 }
 
 function thumbnailClick(photo) {
 	// reload large photo div content with clicked photo
 	var indexOfPhoto = $("#large-photo img").attr("src").split("/")[3].split("_")[2].split(".")[0];
 	$("#large-photo img").attr("src", "../img/gallery/lef20_nyiltnap_" + indexOfPhoto + ".jpg" );
+	$("#large-photo img").css("margin-left", "-" + $("#large-photo img").width()/2 + "px");
 }
 
 
@@ -42,10 +44,12 @@ function initialize() {
 
 	// set large photo div height 
 	$("#large-photo").css("height", $("#large-photo").height() + "px");
-	$("#large-photo span").css("line-height", $("#large-photo").height() + "px")
+	$("#large-photo span").css("line-height", $("#large-photo").height() + "px");
+	$("#large-photo img").css("margin-left", "-" + $("#large-photo img").width()/2 + "px");
 	$(window).resize(function () {
 		$("#large-photo").css("height", $("#large-photo img").height() + "px");	
 		$("#large-photo span").css("line-height", $("#large-photo").height() + "px")	
+		$("#large-photo img").css("margin-left", "-" + $("#large-photo img").width()/2 + "px");
 	});
 	
 	renderThumbnails();
