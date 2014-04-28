@@ -42,8 +42,10 @@ function initialize() {
 
 	// set large photo div height 
 	$("#large-photo").css("height", $("#large-photo").height() + "px");
+	$("#large-photo span").css("line-height", $("#large-photo").height() + "px")
 	$(window).resize(function () {
-		$("#large-photo").css("height", $("#large-photo img").height() + "px");		
+		$("#large-photo").css("height", $("#large-photo img").height() + "px");	
+		$("#large-photo span").css("line-height", $("#large-photo").height() + "px")	
 	});
 	
 	renderThumbnails();

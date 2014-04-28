@@ -946,24 +946,27 @@ footer #facebook span {
 #testimonials div div.orange { background: orange; }
 #testimonials div div.yellow { background: yellow; }
 
+#gallery h2 {
+	margin-bottom: 30px;
+}
 
 #large-photo {
 	width: 100%;
 	margin: 0 auto;
-	margin-bottom: 40px;
+	background: red;
 }
 
 #large-photo img {
-	width: 100%;
+	position: absolute;
+	height: 532px;
+	margin: 0 auto;
 }
 
 #large-photo span {
 	display: inline-block;
-	height: 42px;
-	width: 42px;
-	line-height: 42px;
-	margin-top: -50px;
-	border-radius: 21px;
+	height: 100%;
+	width: 48%;
+	line-height: 532px;
 	font-size: 26px;
 	color: #656862;
 	z-index: 150;
@@ -977,13 +980,11 @@ footer #facebook span {
 #large-photo span#back {
 	position: relative;
 	float: left;
-	margin-left: 8px;
 }
 
 #large-photo span#forward {
 	position: relative;
 	float: right;
-	margin-right: 8px;
 }
 
 
@@ -1084,6 +1085,6 @@ footer #facebook span {
 	}
 	#large-photo {
 		max-width: 800px;
-		height: 660px;
+		height: 532px;
 	}
 }
