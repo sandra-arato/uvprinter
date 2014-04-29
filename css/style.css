@@ -972,6 +972,18 @@ footer #facebook span {
 	padding-top: 140px;
 }
 
+#testimonials .front.csere { background: #566268 url("../img/csere.jpg") no-repeat center; }
+#testimonials .front.dani { background: #566268 url("../img/dani.jpg") no-repeat center; }
+#testimonials .front.mate { background: #566268 url("../img/mate.jpg") no-repeat center; }
+#testimonials .front.wenger { background: #566268 url("../img/wenger.jpg") no-repeat center; }
+#testimonials .front.pauker { background: #566268 url("../img/pauker.jpg") no-repeat center; }
+#testimonials .front.gyorgy { background: #566268 url("../img/gyorgy.jpg") no-repeat center; }
+#testimonials .front.huschit { background: #566268 url("../img/huschit.jpg") no-repeat center; }
+#testimonials .front.rojcsek { background: #566268 url("../img/rojcsek.jpg") no-repeat center; }
+#testimonials .front.zsitva { background: #566268 url("../img/zsitva.jpg") no-repeat center; }
+
+
+
 #testimonials .quote {
 	position: relative;
 	bottom: 0;
