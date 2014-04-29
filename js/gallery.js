@@ -41,6 +41,14 @@ function thumbnailClick(photo) {
 	$("#large-photo img").css("margin-left", "-" + $("#large-photo img").width()/2 + "px");
 }
 
+function flipQuote(quote) {
+	console.log("hello");
+	$("#testimonials .quote").css("bottom", "-200px");
+	$(quote).prev("p").css("display", "none");
+	$(quote).animate({
+		bottom: "0px"
+	}, 400);
+}
 
 function initialize() {
 
@@ -54,10 +62,11 @@ function initialize() {
 		$("#large-photo img").css("margin-left", "-" + $("#large-photo img").width()/2 + "px");
 	});
 	
-	renderThumbnails();
+	// renderThumbnails();
 
-	$("#large-photo span").click(function () { arrowNav(this); });
+	// $("#large-photo span").click(function () { arrowNav(this); });
 	$("div.photo img").click(function () { thumbnailClick(this); });
+	$("#testimonials .front").click(function () { flipQuote(this); })
 
 }
 
