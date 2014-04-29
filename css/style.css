@@ -82,7 +82,6 @@ header nav {
 header nav img {
 	display: block;
 	height: 50px;
-	/*float: left;*/
 	margin-top: 8px;
 	padding-left: 8px;
 }
@@ -137,6 +136,14 @@ header nav a.active {
 header nav a:hover {
 	text-decoration: none;
 	color: #71c441;
+}
+
+header nav.left {
+	text-align: left;
+}
+
+header nav.left a span {
+	padding-left: 40px;
 }
 
 #header-img {
