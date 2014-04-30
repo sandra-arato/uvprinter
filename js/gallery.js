@@ -8,9 +8,10 @@ function renderThumbnails () {
 function arrowNav(direction) {
 	var matches = $("#large-photo img").attr("src").match(/.*lef20_nyiltnap_(\d+)\.jpg$/);
 	var indexOfPhoto;
-	if (matches !== 2) {
+	if (matches.length !== 2) {
 		return
 	};
+	var currentPhotoIndex = matches[1];
 	if (direction.id === "back") {
 		indexOfPhoto = parseInt(currentPhotoIndex) - 1;
 		if (indexOfPhoto < 1) {
