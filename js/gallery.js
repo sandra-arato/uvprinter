@@ -74,6 +74,15 @@ function initialize() {
 	$("div.photo img").click(function () { thumbnailClick(this); });
 	$("#testimonials .front").click(function () { flipQuote($(this).next()); })
 	smoothScroll();
+
+	$(document).keyup(function (e){
+		if (e.which == 39) {
+			arrowNav($("#forward").get(0));
+		}
+		if (e.which == 37) {
+			arrowNav($("#back").get(0));
+		}
+	})
 }
 
 $(document).ready(initialize);
