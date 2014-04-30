@@ -42,11 +42,12 @@ function thumbnailClick(photo) {
 }
 
 function flipQuote(quote) {
-	console.log("hello");
-	$("#testimonials .quote").css("bottom", "-200px");
-	$(quote).prev("p").css("display", "none");
+	$("#testimonials blockquote").css("bottom", "-400px");
+	$("#testimonials div p").css("display", "block");
+	$(quote).prev("div").children("p").fadeOut();
 	$(quote).animate({
-		bottom: "0px"
+		position: "relative",
+		bottom: "-200px"
 	}, 400);
 }
 
@@ -66,7 +67,7 @@ function initialize() {
 
 	// $("#large-photo span").click(function () { arrowNav(this); });
 	$("div.photo img").click(function () { thumbnailClick(this); });
-	$("#testimonials .front").click(function () { flipQuote(this); })
+	$("#testimonials .front").click(function () { flipQuote($(this).next()); })
 
 }
 
