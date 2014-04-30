@@ -34,11 +34,10 @@ function arrowNav(direction) {
 function thumbnailClick(photo) {
 	// reload large photo div content with clicked photo
 	var matches = $(photo).attr("src").match(/.*lef20_nyiltnap_(\d+)\.jpg$/);
-	if ( matches === 2 ) {
+	if ( matches.length === 2 ) {
 		var indexOfPhoto = matches[1];
 		$("#large-photo img").attr("src", "../img/gallery/lef20_nyiltnap_" + indexOfPhoto + ".jpg" );
 	}
-	
 }
 
 function flipQuote(quote) {
