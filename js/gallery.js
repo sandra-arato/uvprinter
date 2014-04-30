@@ -45,24 +45,30 @@ function flipQuote(quote) {
 	}, 400);
 }
 
+function smoothScroll() {
+	$("a[href*=#]:not([href=#])").click(function() {
+		if (location.pathname.replace(/^\//,"") == this.pathname.replace(/^\//,"") && location.hostname == this.hostname) {
+			var target = $(this.hash);
+			target = target.length ? target : $("[name=" + this.hash.slice(1) +"]");
+			if (target.length) {
+				$("html,body").animate({
+					scrollTop: target.offset().top,
+					easing: "easeOutBack"
+				}, 1200);
+				return false;
+			}
+		}
+	});
+}
+
 function initialize() {
 
-	// set large photo div height 
-	$("#large-photo").css("height", $("#large-photo").height() + "px");
-	$("#large-photo span").css("line-height", $("#large-photo").height() + "px");
-	$("#large-photo img").css("margin-left", "-" + $("#large-photo img").width()/2 + "px");
-	$(window).resize(function () {
-		$("#large-photo").css("height", $("#large-photo img").height() + "px");	
-		$("#large-photo span").css("line-height", $("#large-photo").height() + "px")	
-		$("#large-photo img").css("margin-left", "-" + $("#large-photo img").width()/2 + "px");
-	});
-	
-	renderThumbnails();
+	// renderThumbnails();
 
 	$("#large-photo span").click(function () { arrowNav(this); });
 	$("div.photo img").click(function () { thumbnailClick(this); });
 	$("#testimonials .front").click(function () { flipQuote($(this).next()); })
-
+	smoothScroll();
 }
 
 $(document).ready(initialize);

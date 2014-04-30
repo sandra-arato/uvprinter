@@ -902,15 +902,18 @@ footer #facebook span {
 
 #testimonials {
 	margin-top: 62px;
-	padding-top: 30px;
-	padding-bottom: 60px;
+	padding-top: 10px;
+}
+
+#testimonials h1 {
+	font-size: 26px;
 }
 
 #testimonials h1 + p {
 	max-width: 640px;
-	margin: 40px auto 30px auto;
+	margin: 20px auto 30px auto;
 	padding: 0 20px;
-	font-size: 22px;
+	font-size: 16px;
 	line-height: 1.4;
 }
 
@@ -973,7 +976,6 @@ footer #facebook span {
 #testimonials .front.rojcsek { background: #3e3f3c url("../img/rojcsek.jpg") no-repeat center; }
 #testimonials .front.zsitva { background: #3e3f3c url("../img/zsitva.jpg") no-repeat center; }
 
-
 #testimonials .quote {
 	display: block;
 	position: relative;
@@ -991,29 +993,62 @@ footer #facebook span {
 	z-index: 3;
 }
 
+#testimonials div.arrow {
+	display: block;
+	position: relative;
+	top: 0;
+	width: 100%;
+	margin: 0 auto;
+	padding-top: 40px;
+	text-align: center;
+	border: none;
+	background: transparent;
+}
+
+#testimonials div.arrow a {
+	display: block;
+	width: 50px;
+	height: 50px;
+	margin: 0 auto;
+	text-indent: 4px;
+	overflow: hidden;
+	white-space: nowrap;
+	font-size: 40px;
+	color: #71c441;
+}
+
+#testimonials div.arrow a:hover {
+	color: #3d7f15;
+}
+
+#gallery {
+	padding-top: 60px;
+}
+
 #gallery h2 {
 	margin-bottom: 30px;
+	text-align: center;
 }
 
 #large-photo {
+	position: relative;
 	width: 100%;
 	margin: 0 auto;
+	text-align: center;
 }
 
 #large-photo img {
-	position: absolute;
-	height: 532px;
+	height: 240px;
 	width: auto;
 	max-width: 100%;
 	margin: 0 auto;
-	margin-left: -177px;
 }
 
 #large-photo span {
 	display: inline-block;
 	height: 100%;
-	width: 48%;
-	line-height: 532px;
+	width: 50%;
+	line-height: 240px;
 	font-size: 26px;
 	color: #656862;
 	z-index: 150;
@@ -1025,15 +1060,15 @@ footer #facebook span {
 }
 
 #large-photo span#back {
-	position: relative;
-	float: left;
+	position: absolute;
+	left: 0;
 	text-align: left;
 	margin-left: 6px;
 }
 
 #large-photo span#forward {
-	position: relative;
-	float: right;
+	position: absolute;
+	right: 0;
 	text-align: right;
 	margin-right: 6px;
 }
@@ -1110,6 +1145,12 @@ footer #facebook span {
 	#testimonials div.row-fluid {
 		width: 640px;
 	}
+	#large-photo img {
+		height: 320px;
+	}
+	#large-photo span {
+		line-height: 320px;
+	}
 }
 
 @media (min-width: 768px) and (max-width: 979px){
@@ -1132,6 +1173,12 @@ footer #facebook span {
 		display: block;
 		margin: 6px auto;
 	}
+	#large-photo img {
+		height: 480px;
+	}
+	#large-photo span {
+		line-height: 480px;
+	}
 }
 
 @media (min-width: 980px) {
@@ -1141,5 +1188,18 @@ footer #facebook span {
 	#large-photo {
 		max-width: 800px;
 		height: 532px;
+	}
+	#testimonials h1 {
+		font-size: 36px;
+	}
+	#testimonials h1 + p {
+		max-width: 840px;
+		font-size: 22px;
+	}
+	#large-photo img {
+		height: 532px;
+	}
+	#large-photo span {
+		line-height: 532px;
 	}
 }
