@@ -63,7 +63,7 @@ function smoothScroll() {
 
 function initialize() {
 
-	// renderThumbnails();
+	renderThumbnails();
 
 	$("#large-photo span").click(function () { arrowNav(this); });
 	$("div.photo img").click(function () { thumbnailClick(this); });
