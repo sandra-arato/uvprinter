@@ -25,7 +25,7 @@ function arrowNav(direction) {
 	}
 
 	$("#large-photo img").attr("src", "../img/gallery/lef20_nyiltnap_" + indexOfPhoto + ".jpg" );
-	$("#large-photo img").css("margin-left", "-" + $("#large-photo img").width()/2 + "px");
+	// $("#large-photo img").css("margin-left", "-" + $("#large-photo img").width()/2 + "px");
 }
 
 function thumbnailClick(photo) {
