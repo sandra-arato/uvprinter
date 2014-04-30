@@ -6,8 +6,11 @@ function renderThumbnails () {
 }
 
 function arrowNav(direction) {
-	var currentPhotoIndex = $("#large-photo img").attr("src").split("/")[3].split("_")[2].split(".")[0];
+	var matches = $("#large-photo img").attr("src").match(/.*lef20_nyiltnap_(\d+)\.jpg$/);
 	var indexOfPhoto;
+	if (matches !== 2) {
+		return
+	};
 	if (direction.id === "back") {
 		indexOfPhoto = parseInt(currentPhotoIndex) - 1;
 		if (indexOfPhoto < 1) {
@@ -25,14 +28,16 @@ function arrowNav(direction) {
 	}
 
 	$("#large-photo img").attr("src", "../img/gallery/lef20_nyiltnap_" + indexOfPhoto + ".jpg" );
-	// $("#large-photo img").css("margin-left", "-" + $("#large-photo img").width()/2 + "px");
 }
 
 function thumbnailClick(photo) {
 	// reload large photo div content with clicked photo
-	var indexOfPhoto = $(photo).attr("src").split("/")[3].split("_")[2].split(".")[0];
-	$("#large-photo img").attr("src", "../img/gallery/lef20_nyiltnap_" + indexOfPhoto + ".jpg" );
-	$("#large-photo img").css("margin-left", "-" + $("#large-photo img").width()/2 + "px");
+	var matches = $(photo).attr("src").match(/.*lef20_nyiltnap_(\d+)\.jpg$/);
+	if ( matches === 2 ) {
+		var indexOfPhoto = matches[1];
+		$("#large-photo img").attr("src", "../img/gallery/lef20_nyiltnap_" + indexOfPhoto + ".jpg" );
+	}
+	
 }
 
 function flipQuote(quote) {
