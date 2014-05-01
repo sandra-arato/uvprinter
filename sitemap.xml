@@ -7,7 +7,7 @@
       <priority>1</priority>
    </url>
    <url>
-      <loc>http://www.uvprinter.hu/muszaki-adatok.html</loc>
+      <loc>http://www.uvprinter.hu/index.html</loc>
       <lastmod>2014-04-30</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.8</priority>
@@ -19,7 +19,7 @@
       <priority>0.8</priority>
    </url>
    <url>
-      <loc>http://www.uvprinter.hu/nyiltnap/index.html</loc>
+      <loc>http://www.uvprinter.hu/nyiltnap/kapcsolat.html</loc>
       <lastmod>2014-04-30</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.8</priority>
