@@ -140,7 +140,7 @@ function testAndSend() {
 			"width": "980px",
 			"height": "60px",
 			"position": "fixed",
-			"top": "22px",
+			"top": "0",
 			"left": "50%",
 			"margin-left": "-490px",
 			"padding": "0 10px",

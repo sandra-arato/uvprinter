@@ -1,67 +1,64 @@
 <?php
 
-//SMTP needs accurate times, and the PHP time zone MUST be set
-//This should be done in your php.ini, but this is how to do it if you don't have access to that
 date_default_timezone_set('Etc/UTC');
 
 require 'PHPMailer/PHPMailerAutoload.php';
-
-//Create a new PHPMailer instance
+//Creating PHPMailer object and setting properties
 $mail = new PHPMailer();
 
-//Tell PHPMailer to use SMTP
 $mail->isSMTP();
 
 //Enable SMTP debugging
 // 0 = off (for production use)
 // 1 = client messages
 // 2 = client and server messages
-$mail->SMTPDebug = 2;
+$mail->SMTPDebug = 0;
 
-//Ask for HTML-friendly debug output
 $mail->Debugoutput = 'html';
-
-//Set the hostname of the mail server
 $mail->Host = 'smtp.gmail.com';
-
-//Set the SMTP port number - 587 for authenticated TLS, a.k.a. RFC4409 SMTP submission
 $mail->Port = 587;
-
-//Set the encryption system to use - ssl (deprecated) or tls
 $mail->SMTPSecure = 'tls';
-
-//Whether to use SMTP authentication
 $mail->SMTPAuth = true;
 
-//Username to use for SMTP authentication - use full email address for gmail
+//Email account settings
 $mail->Username = "uvprinter.hu@gmail.com";
+$mail->Password = "********";
+$mail->setFrom('uvprinter.hu@gmail.com', 'Roland LEF-20');
 
-//Password to use for SMTP authentication
-$mail->Password = "RolandLEF20";
+//Email message settings
+$mail->CharSet = 'UTF-8';
+$mail->addAddress('edit@vinylgrafik.hu', 'Edit Gjurova');
+$mail->addCC('gergo.palfi@vinylgrafik.hu', 'Gergo Palfi');
+$mail->addCC('ernest@vinylgrafik.hu', 'Erno Szenti');
+$mail->Subject = $_POST['name'] . ' üzenetett küldött';
 
-//Set who the message is to be sent from
-$mail->setFrom('uvprinter.hu@gmail.com', 'Roland LEF20');
+//Message text
+$mail->Body = '<h1>Új üzeneted érkezett!</h1>'
+	. 'Az üzenet feladója: ' . $_POST['name'] . '<br/>'
+	. 'Telefonszám: ' . $_POST['phone'] . '<br/>'
+	. 'Email: ' . $_POST['email'] . '<br/>'
+	. 'Cégnév: ' . $_POST['company'] . '<br/>'
+	. '<h3>' . $_POST['message-text'] . '</h3>'
+	. 'A válaszhoz egyszerűen használd az email-fiókod Válasz funkcióját!';
+//Alternative text for fallback
+$mail->AltBody = 'Új üzenete érkezett!'
+	. "\n"
+	. 'Az üzenet feladója: ' . $_POST['name']
+	. "\n"
+	. 'Telefonszám: ' . $_POST['phone']
+	. "\n"
+	. 'Email: ' . $_POST['email']
+	. "\n"
+	. 'Cégnév: ' . $_POST['company']
+	. "\n"
+	. 'Üzenet: ' . $_POST['message-text']
+	. "\n"
+	. 'A válaszhoz egyszerűen használd az email-fiókod Válasz funkcióját!';
 
-//Set an alternative reply-to address
-$mail->addReplyTo('sandraszenti@gmail.com', 'alexandra sandra');
+//Set an reply-to address based on sender
+$mail->addReplyTo($_POST['email'], $_POST['name']);
 
-//Set who the message is to be sent to
-$mail->addAddress('alexandraszenti@gmail.com', 'John Doe');
-
-//Set the subject line
-$mail->Subject = 'PHPMailer GMail SMTP test';
-
-//Read an HTML message body from an external file, convert referenced images to embedded,
-//convert HTML into a basic plain-text alternative body
-$mail->Body    = 'This is the HTML test message body <b>in bold!</b>';
-
-//Replace the plain text body with one created manually
-$mail->AltBody = 'This is a plain-text message body';
-
-//Attach an image file
-// $mail->addAttachment('images/phpmailer_mini.png');
-
-//send the message, check for errors
+//Send the message, check for errors
 if (!$mail->send()) {
     echo "Mailer Error: " . $mail->ErrorInfo;
 } else {
